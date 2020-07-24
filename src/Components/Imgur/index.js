@@ -5,6 +5,7 @@ import loader from "../../loader.gif";
 
 function Imgur(props) {
   const [show, setShow] = useState(false);
+  const [imgurLoaded, setImgurLoaded] = useState(false);
 
   const handleShow = () => {
     setShow(true);
@@ -14,18 +15,24 @@ function Imgur(props) {
     setShow(false);
   };
 
+  const handleLoaded = () => {
+    setImgurLoaded(true);
+  };
+
   const styleModalFooter = { justifyContent: "flex-start" };
 
   return (
     <React.Fragment>
       <div className="img-container">
-        <LazyLoad
-          offset="0"
-          placeholder={
-            <img src={loader} alt="loading..." height="100" width="100" />
-          }
-        >
-          <img src={props.link} onClick={handleShow} alt={props.title} />
+        <img src={loader} alt="loading..." className="loader" />
+        <LazyLoad>
+          <img
+            src={props.link}
+            onClick={handleShow}
+            alt={props.title}
+            onLoad={handleLoaded}
+            className="imgur"
+          />
         </LazyLoad>
       </div>
       <Modal show={show} onHide={handleClose}>
