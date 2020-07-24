@@ -1,0 +1,61 @@
+$primary: #2f3c48;
+$secondary: #6f7f8c;
+$success: #3e4d59;
+$danger: #cc330d;
+$info: #5c8f94;
+$warning: #6e9fa5;
+$light: #eceeec;
+$dark: #1e2b37;
+
+@import "~bootstrap/scss/bootstrap.scss";
+
+body {
+  background: #182145;
+}
+
+.row > div {
+  margin: 15px 0;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style: none;
+}
+
+.img-wrapper {
+  background: white;
+  padding: 15px 15px 0 15px;
+  transition: all 0.2s ease-in-out;
+  > span {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    width: 100%;
+    display: inline-block;
+  }
+}
+
+.img-container {
+  cursor: pointer;
+  width: 100%;
+  padding-bottom: 56.25%;
+  position: relative;
+  background: #fff;
+  overflow: hidden;
+  > img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+  }
+}
+
+.img-wrapper:hover,
+.img-wrapper:active {
+  transform: scale(1.05);
+}
