@@ -30,7 +30,8 @@ li {
   background: white;
   padding: 15px 15px 0 15px;
   transition: all 0.2s ease-in-out;
-  > span {
+
+  span {
     white-space: nowrap;
     text-overflow: ellipsis;
     overflow: hidden;
@@ -46,7 +47,8 @@ li {
   position: relative;
   background: #fff;
   overflow: hidden;
-  > img {
+
+  img {
     position: absolute;
     top: 0;
     left: 0;

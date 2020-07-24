@@ -1,9 +1,7 @@
 import React, { useState, useEffect } from "react";
 import API from "./Api";
-import Imgur from "./Imgur";
 import Container from "react-bootstrap/Container";
-import Row from "react-bootstrap/Row";
-import Col from "react-bootstrap/Col";
+import Galleries from "./Components/Galleries";
 
 function App() {
   const [galleries, setGalleries] = useState([]);
@@ -24,29 +22,7 @@ function App() {
 
   return (
     <Container fluid className="h-100">
-      <Row>
-        {galleries.map((gallery) => {
-          const images = gallery["images"];
-          const galleryTitle = gallery["title"];
-          return (
-            <React.Fragment>
-              {images.map((image) => {
-                if (image.type !== "image/jpeg") {
-                  return null;
-                }
-                return (
-                  <Col xs={12} sm={6} md={4} lg={3}>
-                    <div className="img-wrapper">
-                      <Imgur {...image} title={galleryTitle} />
-                      <span>{galleryTitle}</span>
-                    </div>
-                  </Col>
-                );
-              })}
-            </React.Fragment>
-          );
-        })}
-      </Row>
+      <Galleries galleries={galleries} />
     </Container>
   );
 }
