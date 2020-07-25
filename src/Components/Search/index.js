@@ -1,12 +1,14 @@
 import React, { useState, useContext } from "react";
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
+import Alert from "react-bootstrap/Alert";
 import API from "../../Api";
 import { GalleriesContext } from "../../GalleriesContext";
 
 function Search(props) {
   const [galleries, setGalleries] = useContext(GalleriesContext);
   const [image, setImage] = useState("");
+  const [showError, setShowError] = useState(false);
 
   const handleSubmit = async (event) => {
     event.preventDefault();
@@ -23,6 +25,7 @@ function Search(props) {
       );
       setGalleries(response.data.data);
     } catch (error) {
+      setShowError(true);
       console.error(error);
     }
   };
@@ -69,6 +72,11 @@ function Search(props) {
           Reset
         </Button>
       </div>
+      {showError && (
+        <Alert variant="danger" className="mt-5">
+          Something went wrong while connecting to the API.
+        </Alert>
+      )}
     </Form>
   );
 }
