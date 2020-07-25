@@ -8,7 +8,10 @@ import { GalleriesContext } from "../../GalleriesContext";
 function Search(props) {
   const [galleries, setGalleries] = useContext(GalleriesContext);
   const [image, setImage] = useState("");
+  const [sort, setSort] = useState("top");
+  const [window, setWindow] = useState("all");
   const [showError, setShowError] = useState(false);
+  const [showViral, setShowViral] = useState(true);
 
   const handleSubmit = async (event) => {
     event.preventDefault();
@@ -21,7 +24,7 @@ function Search(props) {
 
     try {
       const response = await API.get(
-        `/gallery/search/?q=${image}&q_type=jpg&q_size_px=small`
+        `/gallery/search/${sort}/${window}/?q=${image}&q_type=jpg&q_size_px=small&showViral=${showViral}`
       );
       setGalleries(response.data.data);
     } catch (error) {
@@ -45,7 +48,11 @@ function Search(props) {
       </Form.Group>
       <Form.Group>
         <Form.Label>Sort by:</Form.Label>
-        <Form.Control as="select" defaultValue="top">
+        <Form.Control
+          as="select"
+          defaultValue="top"
+          onChange={(event) => setSort(event.target.value)}
+        >
           <option value="top">Top</option>
           <option value="time">Time</option>
           <option value="viral">Viral</option>
@@ -53,7 +60,11 @@ function Search(props) {
       </Form.Group>
       <Form.Group>
         <Form.Label>Window:</Form.Label>
-        <Form.Control as="select" defaultValue="all">
+        <Form.Control
+          as="select"
+          defaultValue="all"
+          onChange={(event) => setWindow(event.target.value)}
+        >
           <option value="all">All</option>
           <option value="day">Day</option>
           <option value="week">Week</option>
@@ -62,7 +73,15 @@ function Search(props) {
         </Form.Control>
       </Form.Group>
       <Form.Group>
-        <Form.Check type="switch" id="virals-switch" label="Include virals" />
+        <Form.Check
+          type="switch"
+          id="virals-switch"
+          label="Include virals"
+          checked={showViral}
+          onChange={(event) => {
+            setShowViral(!showViral);
+          }}
+        />
       </Form.Group>
       <div className="d-flex justify-content-end">
         <Button variant="primary" type="submit">
