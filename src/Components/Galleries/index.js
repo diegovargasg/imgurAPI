@@ -1,14 +1,27 @@
-import React from "react";
+import _ from "lodash";
+import React, { useContext } from "react";
 import Imgur from "../Imgur";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
+import { GalleriesContext } from "../../GalleriesContext";
 
 function Galleries(props) {
+  const [galleries, setGalleries] = useContext(GalleriesContext);
+
+  if (galleries.lenght === 0) {
+    return null;
+  }
+
   return (
     <Row>
-      {props.galleries.map((gallery) => {
-        const images = gallery["images"];
-        const galleryTitle = gallery["title"];
+      {galleries.map((gallery) => {
+        const images = _.get(gallery, "images", false);
+        const galleryTitle = _.get(gallery, "title", "");
+
+        if (!images) {
+          return null;
+        }
+
         return (
           <React.Fragment>
             {images.map((image) => {

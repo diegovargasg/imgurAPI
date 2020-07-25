@@ -1,5 +1,5 @@
-$primary: #2f3c48;
-$secondary: #6f7f8c;
+$primary: #b71a69;
+$secondary: #00a9ce;
 $success: #3e4d59;
 $danger: #cc330d;
 $info: #5c8f94;
@@ -11,6 +11,11 @@ $dark: #1e2b37;
 
 body {
   background: #182145;
+  color: white;
+}
+
+.modal-dialog {
+  color: $dark;
 }
 
 .row > div {

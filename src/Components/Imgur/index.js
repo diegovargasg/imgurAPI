@@ -24,7 +24,9 @@ function Imgur(props) {
   return (
     <React.Fragment>
       <div className="img-container">
-        <img src={loader} alt="loading..." className="loader" />
+        {!imgurLoaded && (
+          <img src={loader} alt="loading..." className="loader" />
+        )}
         <LazyLoad>
           <img
             src={props.link}
