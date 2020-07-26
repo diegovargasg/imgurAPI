@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/imgurAPI/static/css/main.a6d31ab8.chunk.css",
-    "main.js": "/imgurAPI/static/js/main.47f7d514.chunk.js",
-    "main.js.map": "/imgurAPI/static/js/main.47f7d514.chunk.js.map",
+    "main.css": "/imgurAPI/static/css/main.8ebabb51.chunk.css",
+    "main.js": "/imgurAPI/static/js/main.e707ee1d.chunk.js",
+    "main.js.map": "/imgurAPI/static/js/main.e707ee1d.chunk.js.map",
     "runtime-main.js": "/imgurAPI/static/js/runtime-main.3007d6d4.js",
     "runtime-main.js.map": "/imgurAPI/static/js/runtime-main.3007d6d4.js.map",
-    "static/js/2.2f65fea2.chunk.js": "/imgurAPI/static/js/2.2f65fea2.chunk.js",
-    "static/js/2.2f65fea2.chunk.js.map": "/imgurAPI/static/js/2.2f65fea2.chunk.js.map",
+    "static/js/2.08295543.chunk.js": "/imgurAPI/static/js/2.08295543.chunk.js",
+    "static/js/2.08295543.chunk.js.map": "/imgurAPI/static/js/2.08295543.chunk.js.map",
     "index.html": "/imgurAPI/index.html",
-    "precache-manifest.39627d2f8779b6898f6c4dd6c92de755.js": "/imgurAPI/precache-manifest.39627d2f8779b6898f6c4dd6c92de755.js",
+    "precache-manifest.3141a772e7541a89eca80d7ab11921e7.js": "/imgurAPI/precache-manifest.3141a772e7541a89eca80d7ab11921e7.js",
     "service-worker.js": "/imgurAPI/service-worker.js",
-    "static/css/main.a6d31ab8.chunk.css.map": "/imgurAPI/static/css/main.a6d31ab8.chunk.css.map",
-    "static/js/2.2f65fea2.chunk.js.LICENSE.txt": "/imgurAPI/static/js/2.2f65fea2.chunk.js.LICENSE.txt"
+    "static/css/main.8ebabb51.chunk.css.map": "/imgurAPI/static/css/main.8ebabb51.chunk.css.map",
+    "static/js/2.08295543.chunk.js.LICENSE.txt": "/imgurAPI/static/js/2.08295543.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.3007d6d4.js",
-    "static/js/2.2f65fea2.chunk.js",
-    "static/css/main.a6d31ab8.chunk.css",
-    "static/js/main.47f7d514.chunk.js"
+    "static/js/2.08295543.chunk.js",
+    "static/css/main.8ebabb51.chunk.css",
+    "static/js/main.e707ee1d.chunk.js"
   ]
 }
