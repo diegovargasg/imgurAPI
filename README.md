@@ -2,6 +2,10 @@
 
 imgur web Search gallery developed with ReactJs.
 
+### Live Version
+
+https://diegovargasg.github.io/imgurAPI/
+
 ### Project Requirements
 
 - Show gallery images in a grid of thumbnails and lazy load them
