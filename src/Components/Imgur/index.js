@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Modal from "react-bootstrap/Modal";
 import LazyLoad from "react-lazy-load";
-import loader from "../../loader.gif";
+import Spinner from "react-bootstrap/Spinner";
 
 function Imgur(props) {
   const [show, setShow] = useState(false);
@@ -25,7 +25,7 @@ function Imgur(props) {
     <React.Fragment>
       <div className="img-container">
         {!imgurLoaded && (
-          <img src={loader} alt="loading..." className="loader" />
+          <Spinner animation="border" className="loader" size="sm" />
         )}
         <LazyLoad>
           <img

@@ -1,6 +1,8 @@
+import _ from "lodash";
 import React, { useState, useContext } from "react";
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
+import Spinner from "react-bootstrap/Spinner";
 import Alert from "react-bootstrap/Alert";
 import API from "../../Api";
 import { GalleriesContext } from "../../GalleriesContext";
@@ -12,10 +14,12 @@ function Search(props) {
   const [window, setWindow] = useState("all");
   const [showError, setShowError] = useState(false);
   const [showViral, setShowViral] = useState(true);
+  const [showSpinner, setShowSpinner] = useState(false);
 
   const handleSubmit = async (event) => {
     event.preventDefault();
     event.stopPropagation();
+    setShowSpinner(true);
 
     const form = event.currentTarget;
     if (form.checkValidity() === false) {
@@ -27,10 +31,13 @@ function Search(props) {
         `/gallery/search/${sort}/${window}/?q=${image}&q_type=jpg&q_size_px=small&showViral=${showViral}`
       );
       setGalleries(response.data.data);
+      if (_.size(response.data.data) === 0) {
+        setShowError(true);
+      }
     } catch (error) {
-      setShowError(true);
       console.error(error);
     }
+    setShowSpinner(false);
   };
 
   return (
@@ -85,6 +92,15 @@ function Search(props) {
       </Form.Group>
       <div className="d-flex justify-content-end">
         <Button variant="primary" type="submit">
+          {showSpinner && (
+            <Spinner
+              as="span"
+              animation="border"
+              size="sm"
+              role="status"
+              aria-hidden="true"
+            />
+          )}{" "}
           Search
         </Button>
         <Button variant="secondary" type="reset" className="ml-2">
@@ -93,7 +109,7 @@ function Search(props) {
       </div>
       {showError && (
         <Alert variant="danger" className="mt-5">
-          Something went wrong while connecting to the API.
+          No images found.
         </Alert>
       )}
     </Form>
