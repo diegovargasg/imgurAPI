@@ -28,10 +28,10 @@ Clone the respository and install npm and composer dependencies.
 ```sh
 $ git clone https://github.com/diegovargasg/imgurAPI.git
 $ cd imgurAPI
-$ npm run v-install
+$ npm run e-install
 ```
 
-_In case you are using windows run the command: npm run v-install-windows_
+_In case you are using windows run the command: npm run e-install-windows_
 
 ### Serve client
 
