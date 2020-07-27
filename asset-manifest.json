@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/imgurAPI/static/css/main.8ebabb51.chunk.css",
+    "main.css": "/imgurAPI/static/css/main.f356271b.chunk.css",
     "main.js": "/imgurAPI/static/js/main.e707ee1d.chunk.js",
     "main.js.map": "/imgurAPI/static/js/main.e707ee1d.chunk.js.map",
     "runtime-main.js": "/imgurAPI/static/js/runtime-main.3007d6d4.js",
@@ -8,15 +8,15 @@
     "static/js/2.08295543.chunk.js": "/imgurAPI/static/js/2.08295543.chunk.js",
     "static/js/2.08295543.chunk.js.map": "/imgurAPI/static/js/2.08295543.chunk.js.map",
     "index.html": "/imgurAPI/index.html",
-    "precache-manifest.3141a772e7541a89eca80d7ab11921e7.js": "/imgurAPI/precache-manifest.3141a772e7541a89eca80d7ab11921e7.js",
+    "precache-manifest.4092204e0126029d745056ada87d9240.js": "/imgurAPI/precache-manifest.4092204e0126029d745056ada87d9240.js",
     "service-worker.js": "/imgurAPI/service-worker.js",
-    "static/css/main.8ebabb51.chunk.css.map": "/imgurAPI/static/css/main.8ebabb51.chunk.css.map",
+    "static/css/main.f356271b.chunk.css.map": "/imgurAPI/static/css/main.f356271b.chunk.css.map",
     "static/js/2.08295543.chunk.js.LICENSE.txt": "/imgurAPI/static/js/2.08295543.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.3007d6d4.js",
     "static/js/2.08295543.chunk.js",
-    "static/css/main.8ebabb51.chunk.css",
+    "static/css/main.f356271b.chunk.css",
     "static/js/main.e707ee1d.chunk.js"
   ]
 }

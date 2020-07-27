@@ -1,11 +1,11 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "2e219c3b0c994aff7700158a3057b27f",
+    "revision": "686e910282ef2844b18338bddbb1ef33",
     "url": "/imgurAPI/index.html"
   },
   {
-    "revision": "e7551dde89d5ca2cf3e2",
-    "url": "/imgurAPI/static/css/main.8ebabb51.chunk.css"
+    "revision": "297086d5f59605073c92",
+    "url": "/imgurAPI/static/css/main.f356271b.chunk.css"
   },
   {
     "revision": "aa0cfa793dc0543c9647",
@@ -16,7 +16,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/imgurAPI/static/js/2.08295543.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "e7551dde89d5ca2cf3e2",
+    "revision": "297086d5f59605073c92",
     "url": "/imgurAPI/static/js/main.e707ee1d.chunk.js"
   },
   {
