@@ -37,6 +37,7 @@ li {
   transition: all 0.2s ease-in-out;
 
   span {
+    color: $dark;
     white-space: nowrap;
     text-overflow: ellipsis;
     overflow: hidden;
